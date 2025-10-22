@@ -416,8 +416,6 @@
                     <img src="https://futuregardens1.com/wp-content/uploads/2025/10/academy-logo.png" 
                          alt="أكاديمية النخبة الدولية"
                          onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-                    <div style="display:none; width:60px; height:60px; background:#8B1538; border-radius:10px; display:flex; align-items:center; justify-content:center; color:white; font-weight:800; font-size:24px;">IEA</div>
-                    <span class="logo-text">أكاديمية النخبة الدولية</span>
                 </div>
                 <div class="visitors-counter">
                     <span class="dot"></span>
@@ -529,15 +527,7 @@
         });
         
         // Fallback: hide loading after 10 seconds if form doesn't load
-        setTimeout(function() {
-            const loadingDiv = document.getElementById('formLoading');
-            const formContainer = document.getElementById('hubspotFormContainer');
-            if (loadingDiv && formContainer && formContainer.querySelector('form')) {
-                loadingDiv.style.display = 'none';
-            } else if (loadingDiv) {
-                loadingDiv.innerHTML = '<p style="color:#d32f2f; font-size:16px;">⚠️ حدث خطأ في تحميل الاستمارة. يرجى <a href="https://x.com/IEATD1/" target="_blank" style="color:#8B1538; font-weight:700;">التواصل معنا مباشرة على X</a></p>';
-            }
-        }, 10000);
+   
         
         // Random visitor counter that looks realistic
         function updateVisitorCount() {
