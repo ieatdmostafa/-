@@ -178,10 +178,119 @@
             fill: #8B1538;
         }
 
+        /* Form Section */
+        .form-section {
+            padding: 80px 20px;
+            background: white;
+        }
+
+        .form-section h2 {
+            text-align: center;
+            font-size: 40px;
+            font-weight: 800;
+            color: #2c2c2c;
+            margin-bottom: 20px;
+        }
+
+        .form-section p {
+            text-align: center;
+            font-size: 18px;
+            color: #555;
+            margin-bottom: 50px;
+        }
+
+        .form-container {
+            max-width: 700px;
+            margin: 0 auto;
+            background: #f8f8f8;
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            min-height: 500px;
+        }
+        
+        .form-container iframe {
+            width: 100%;
+            min-height: 600px;
+            border: none;
+        }
+        
+        /* HubSpot Form Styling */
+        #hubspotFormContainer {
+            direction: rtl;
+            text-align: right;
+        }
+        
+        #hubspotFormContainer .hs-form {
+            direction: rtl !important;
+        }
+        
+        #hubspotFormContainer .hs-input {
+            width: 100% !important;
+            padding: 12px !important;
+            border: 2px solid #e0e0e0 !important;
+            border-radius: 8px !important;
+            font-family: 'Tajawal', sans-serif !important;
+            font-size: 16px !important;
+            transition: all 0.3s ease !important;
+            background: white !important;
+        }
+        
+        #hubspotFormContainer .hs-input:focus {
+            border-color: #8B1538 !important;
+            outline: none !important;
+            box-shadow: 0 0 0 3px rgba(139, 21, 56, 0.1) !important;
+        }
+        
+        #hubspotFormContainer .hs-button {
+            background: #8B1538 !important;
+            color: white !important;
+            padding: 15px 40px !important;
+            border: none !important;
+            border-radius: 50px !important;
+            font-family: 'Tajawal', sans-serif !important;
+            font-size: 18px !important;
+            font-weight: 700 !important;
+            cursor: pointer !important;
+            transition: all 0.3s ease !important;
+            width: 100% !important;
+            margin-top: 20px !important;
+        }
+        
+        #hubspotFormContainer .hs-button:hover {
+            background: #a01c44 !important;
+            transform: translateY(-2px) !important;
+            box-shadow: 0 8px 20px rgba(139, 21, 56, 0.3) !important;
+        }
+        
+        #hubspotFormContainer label {
+            font-family: 'Tajawal', sans-serif !important;
+            font-weight: 600 !important;
+            color: #2c2c2c !important;
+            margin-bottom: 8px !important;
+            display: block !important;
+        }
+        
+        #hubspotFormContainer .hs-error-msgs {
+            list-style: none !important;
+            padding: 0 !important;
+            margin: 5px 0 0 0 !important;
+        }
+        
+        #hubspotFormContainer .hs-error-msg {
+            color: #d32f2f !important;
+            font-size: 14px !important;
+            font-family: 'Tajawal', sans-serif !important;
+        }
+        
+        #hubspotFormContainer .hs-form-field {
+            margin-bottom: 20px !important;
+        }
+
         /* Features Section */
         .features {
             padding: 80px 20px;
-            background: white;
+            background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
         }
 
         .features h2 {
@@ -201,12 +310,13 @@
         }
 
         .feature-card {
-            background: linear-gradient(135deg, #f8f8f8 0%, #fff 100%);
+            background: white;
             padding: 40px 30px;
             border-radius: 20px;
             text-align: center;
             transition: all 0.3s ease;
             border: 2px solid transparent;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
         }
 
         .feature-card:hover {
@@ -231,48 +341,6 @@
             font-size: 16px;
             color: #555;
             line-height: 1.8;
-        }
-
-        /* Form Section */
-        .form-section {
-            padding: 80px 20px;
-            background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
-        }
-
-        .form-section h2 {
-            text-align: center;
-            font-size: 40px;
-            font-weight: 800;
-            color: #2c2c2c;
-            margin-bottom: 20px;
-        }
-
-        .form-section p {
-            text-align: center;
-            font-size: 18px;
-            color: #555;
-            margin-bottom: 50px;
-        }
-
-        .form-container {
-            max-width: 700px;
-            margin: 0 auto;
-            background: white;
-            padding: 50px;
-            border-radius: 20px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
-            min-height: 400px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border: 3px dashed #8B1538;
-        }
-
-        .form-placeholder {
-            text-align: center;
-            color: #999;
-            font-size: 18px;
-            font-weight: 600;
         }
 
         /* Footer CTA */
@@ -345,7 +413,10 @@
         <div class="container">
             <div class="header-content">
                 <div class="logo">
-                    <img src="https://futuregardens1.com/wp-content/uploads/2025/10/academy-logo.png" alt="أكاديمية النخبة الدولية">
+                    <img src="https://futuregardens1.com/wp-content/uploads/2025/10/academy-logo.png" 
+                         alt="أكاديمية النخبة الدولية"
+                         onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                    <div style="display:none; width:60px; height:60px; background:#8B1538; border-radius:10px; display:flex; align-items:center; justify-content:center; color:white; font-weight:800; font-size:24px;">IEA</div>
                     <span class="logo-text">أكاديمية النخبة الدولية</span>
                 </div>
                 <div class="visitors-counter">
@@ -368,6 +439,22 @@
                 </svg>
                 تابعنا على X للحصول على الاستشارة
             </a>
+        </div>
+    </section>
+
+    <!-- Form Section -->
+    <section class="form-section">
+        <div class="container">
+            <h2>سجل الآن واحصل على استشارتك المجانية</h2>
+            <p>املأ النموذج أدناه وسيتواصل معك أحد خبرائنا في أقرب وقت</p>
+            <div class="form-container">
+                <div id="formLoading" style="text-align:center; padding:40px; color:#8B1538;">
+                    <div style="margin-bottom:20px;">⏳</div>
+                    <p style="font-size:18px; font-weight:600;">جاري تحميل الاستمارة...</p>
+                    <p style="font-size:14px; color:#666; margin-top:10px;">إذا لم تظهر الاستمارة، يرجى <a href="https://x.com/IEATD1/" target="_blank" style="color:#8B1538; font-weight:700;">التواصل معنا على X</a></p>
+                </div>
+                <div id="hubspotFormContainer"></div>
+            </div>
         </div>
     </section>
 
@@ -395,17 +482,6 @@
         </div>
     </section>
 
-    <!-- Form Section -->
-    <section class="form-section">
-        <div class="container">
-            <h2>سجل الآن واحصل على استشارتك المجانية</h2>
-            <p>املأ النموذج أدناه وسيتواصل معك أحد خبرائنا في أقرب وقت</p>
-            <div class="form-container">
-                <div class="hs-form-frame" data-region="na1" data-form-id="e001eb63-e914-4252-8638-d8b7fa82d2d5" data-portal-id="22285292"></div>
-            </div>
-        </div>
-    </section>
-
     <!-- Footer CTA -->
     <section class="footer-cta">
         <div class="container">
@@ -427,8 +503,42 @@
         </div>
     </footer>
 
-    <script src="https://js.hsforms.net/forms/embed/22285292.js" defer></script>
+    <!-- HubSpot Form Script -->
+    <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
     <script>
+        // Initialize HubSpot form when script loads
+        window.addEventListener('load', function() {
+            if (window.hbspt) {
+                hbspt.forms.create({
+                    region: "na1",
+                    portalId: "22285292",
+                    formId: "e001eb63-e914-4252-8638-d8b7fa82d2d5",
+                    target: "#hubspotFormContainer",
+                    onFormReady: function($form) {
+                        // Hide loading message when form is ready
+                        const loadingDiv = document.getElementById('formLoading');
+                        if (loadingDiv) {
+                            loadingDiv.style.display = 'none';
+                        }
+                    },
+                    onFormSubmit: function($form) {
+                        console.log('Form submitted');
+                    }
+                });
+            }
+        });
+        
+        // Fallback: hide loading after 10 seconds if form doesn't load
+        setTimeout(function() {
+            const loadingDiv = document.getElementById('formLoading');
+            const formContainer = document.getElementById('hubspotFormContainer');
+            if (loadingDiv && formContainer && formContainer.querySelector('form')) {
+                loadingDiv.style.display = 'none';
+            } else if (loadingDiv) {
+                loadingDiv.innerHTML = '<p style="color:#d32f2f; font-size:16px;">⚠️ حدث خطأ في تحميل الاستمارة. يرجى <a href="https://x.com/IEATD1/" target="_blank" style="color:#8B1538; font-weight:700;">التواصل معنا مباشرة على X</a></p>';
+            }
+        }, 10000);
+        
         // Random visitor counter that looks realistic
         function updateVisitorCount() {
             const baseCount = 247;
